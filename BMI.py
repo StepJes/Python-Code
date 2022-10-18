@@ -54,9 +54,11 @@ def find_body_state(BMI):
   return body_state
 
 def output():
-  info = input_variables
+  info = input_variables()
   BMI = calculate_BMI(info)
   body_state = find_body_state(BMI)
 
-  print("Name: {}\nAge: {}\nGender: {}\nWeight(in kg): {:.3f}\nHeight(in m): {:.2f}\nBody Mass Index: {}\nAcoording to your body mass index, you are {}.".format(info[0], info[1], info[2], info[3], info[4], BMI, body_state))
+  print("Name: {}\nAge: {}\nGender: {}\nWeight(in kg): {:.3f}\nHeight(in m): {:.2f}\nBody Mass Index: {:.2f}\nAcoording to your body mass index, you are {}.".format(info[0], info[1], info[2], info[3], info[4], BMI, body_state))
+
+output()
   
